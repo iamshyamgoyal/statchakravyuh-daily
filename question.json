@@ -3,13 +3,13 @@
   "topic": "Probability",
   "difficulty": "Medium",
   "date": "Mon, 08 Jun 2026",
-  "question": "Let X follow a Poisson distribution with parameter λ > 0. What is the probability that X takes an even value (i.e., X = 0, 2, 4, …)?",
-  "equation": "P(X \\text{ even}) = e^{-\\lambda} \\sum_{k=0}^{\\infty} \\frac{\\lambda^{2k}}{(2k)!}",
-  "equation_note": "Sum runs over all non-negative integers k",
+  "question": "Let X and Y be independent random variables with X ~ Poisson(λ) and Y ~ Poisson(μ). Given that X + Y = n, the conditional distribution of X belongs to which family?",
+  "equation": "P(X = k \\mid X + Y = n), \\quad k = 0, 1, \\ldots, n",
+  "equation_note": "X + Y \\sim \\text{Poisson}(\\lambda + \\mu) by the additive property",
   "options": [
-    "\\dfrac{e^{-\\lambda}}{2}",
-    "\\dfrac{1 + e^{-\\lambda}}{2}",
-    "\\dfrac{1 + e^{-2\\lambda}}{2}",
-    "\\dfrac{1 - e^{-2\\lambda}}{2}"
+    "\\text{Poisson}\\!\\left(\\dfrac{n\\lambda}{\\lambda+\\mu}\\right)",
+    "\\text{Binomial}\\!\\left(n,\\;\\dfrac{\\lambda}{\\lambda+\\mu}\\right)",
+    "\\text{Negative Binomial}\\!\\left(n,\\;\\dfrac{\\lambda}{\\lambda+\\mu}\\right)",
+    "\\text{Uniform on } \\{0, 1, \\ldots, n\\}"
   ]
 }
