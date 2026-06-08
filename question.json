@@ -1,1 +1,15 @@
-
+{
+  "type": "question",
+  "topic": "Probability",
+  "difficulty": "Medium",
+  "date": "Mon, 08 Jun 2026",
+  "question": "Let X follow a Poisson distribution with parameter λ > 0. What is the probability that X takes an even value (i.e., X = 0, 2, 4, …)?",
+  "equation": "P(X \\text{ even}) = e^{-\\lambda} \\sum_{k=0}^{\\infty} \\frac{\\lambda^{2k}}{(2k)!}",
+  "equation_note": "Sum runs over all non-negative integers k",
+  "options": [
+    "\\dfrac{e^{-\\lambda}}{2}",
+    "\\dfrac{1 + e^{-\\lambda}}{2}",
+    "\\dfrac{1 + e^{-2\\lambda}}{2}",
+    "\\dfrac{1 - e^{-2\\lambda}}{2}"
+  ]
+}
