@@ -1,1 +1,28 @@
-
+{
+  "type": "solution",
+  "topic": "Probability",
+  "difficulty": "Medium",
+  "date": "Mon, 08 Jun 2026",
+  "correct_label": "C",
+  "correct_answer": "\\dfrac{1 + e^{-2\\lambda}}{2}",
+  "steps": [
+    {
+      "title": "Write the sum over even values",
+      "text": "For X ~ Poisson(λ), collect all even non-negative integers:",
+      "equation": "P(X \\text{ even}) = \\sum_{k=0}^{\\infty} \\frac{e^{-\\lambda}\\lambda^{2k}}{(2k)!} = e^{-\\lambda} \\sum_{k=0}^{\\infty} \\frac{\\lambda^{2k}}{(2k)!}"
+    },
+    {
+      "title": "Recognise the hyperbolic cosine",
+      "text": "The Taylor series of cosh is exactly the sum of even-power terms of the exponential:",
+      "equation": "\\cosh(\\lambda) = \\frac{e^{\\lambda} + e^{-\\lambda}}{2} = \\sum_{k=0}^{\\infty} \\frac{\\lambda^{2k}}{(2k)!}"
+    },
+    {
+      "title": "Substitute and simplify",
+      "text": "Replace the series with cosh(λ) and simplify:",
+      "equation": "P(X \\text{ even}) = e^{-\\lambda} \\cdot \\frac{e^{\\lambda} + e^{-\\lambda}}{2} = \\frac{1 + e^{-2\\lambda}}{2}"
+    }
+  ],
+  "key_result": "P(X \\text{ even}) = \\dfrac{1 + e^{-2\\lambda}}{2}",
+  "key_note": "The trick is identifying the even-indexed partial sum of the exponential series as cosh(λ). As λ → ∞, this probability approaches 1/2, which makes intuitive sense.",
+  "exam_tip": "Whenever a Poisson probability sums over only even or only odd indices, split e^λ and e^{-λ} using cosh and sinh — this reduces the series immediately."
+}
